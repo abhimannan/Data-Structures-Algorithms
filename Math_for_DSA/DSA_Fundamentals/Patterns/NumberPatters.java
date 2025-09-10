@@ -274,8 +274,69 @@ public class NumberPatters {
             System.out.println();
         }
     }
+    static void pattern22(int n) {
+        for(int i=1;i<=n;i++) {
+            for(int j=i+(i-1);j<(n*2);j=j+2) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void pattern23(int n) {
+        for(int i=n;i>=1;i--) {
+            int num = i+(i-1);
+            for(int j=1;j<=(n-i+1);j++) {
+                System.out.print(num+" ");
+                num = num+2;
+            }
+            System.out.println();
+        }
+    }
+    static void pattern24(int n) {
+        for(int i=0;i<=n;i++) {
+            int num = 1;
+            for(int j=1;j<=i;j++) {
+                System.out.print(num);
+                if(num == 0) {
+                    num = 1;
+                }
+                else {
+                    num = 0;
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void pattern25(int n) {
+        int num = 1;
+        for(int i=1;i<=n;i++) {
+            for(int j=1;j<=i;j++) {
+                System.out.print(num);
+                if(num == 1) {
+                    num = 0;
+                }
+                else {
+                    num = 1;
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void pattern26(int n) {
+        for(int i=1;i<=n;i++) {
+            for(int j=1;j<=i;j++) {
+                if(i==1 || j==1 || i==n || j==i) {
+                    System.out.print("1");
+                }
+                else {
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         int n = 5;
-        pattern21(n);
+        pattern26(n);
     }
 }
