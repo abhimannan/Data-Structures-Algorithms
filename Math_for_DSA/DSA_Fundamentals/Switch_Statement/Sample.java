@@ -33,16 +33,40 @@ public class Sample {
         }
     }
     static void Example2(int n1,int n2) {
-        switch()
+        int res = (n1>n2) ? 0 : ((n2>n1) ? 1 : 2);
+        switch(res) {
+            case 0:
+                System.out.println("n1 is larger");
+                break;
+            case 1:
+                System.out.println("n2 is larger");
+                break;
+            case 2:
+                System.out.println("n1 == n2");
+                break;
+        }
+    }
+    static void EvenorOdd() {
+        int num = -13;
+        int res = (num%2==0) ? 0 : 1;
+        switch(res){
+            case 0:
+                System.out.println("Even");
+                break;
+            case 1:
+                System.out.println("Odd");
+                break;
+        }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the 1st number :");
-        int n1 = sc.nextInt();
-        System.out.print("Enter the 2nd number ");
-        int n2 = sc.nextInt();
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("Enter the 1st number :");
+        // int n1 = sc.nextInt();
+        // System.out.print("Enter the 2nd number ");
+        // int n2 = sc.nextInt();
 
-        Example2(n1,n2);
+        // Example2(n1,n2);
+        EvenorOdd();
     }
 }
 
